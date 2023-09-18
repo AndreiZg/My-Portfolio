@@ -1,0 +1,160 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root{
+    --background : #89C2D9;
+    --text : #014F86;
+    --btn : #2C7DA0;
+    --elements : #013A63;
+    --etc : #012A4A;
+}
+
+body{
+    background-color: var(--background);
+    overflow: hidden;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    height: 90px;
+    width: 70%;
+    margin: auto;
+    background-color: rgba(0, 70, 84, 0.2);
+    justify-content: center;
+    clip-path: polygon(50% 0%, 100% 0, 82% 100%, 18% 100%, 0 0);
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 6rem;
+    font-size: 20px;
+}
+
+nav li {
+    color: white;
+    font-family: sans-serif;
+}
+
+nav a {
+    position: relative;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+    cursor: pointer;
+    color:white;
+}
+
+.photo{
+    position: absolute;
+    bottom: 50px;
+    margin-left: 30px;
+    width: 500px;
+    height: 500px;
+    background-color: rgba(58, 127, 141, 0.2);
+    clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+    animation: slideToRight 1s ease forwards;
+}
+
+.photo img{
+    position: absolute;
+    width: 450px;
+    height: 440px;
+    bottom: 0;
+}
+
+.main-text{
+    position: absolute;
+    text-align: center;
+    font-size: 2.8rem;
+    font-family: sans-serif;
+    top: 52%;
+    left: 70%;
+    transform: translate(-50%,-50%);
+}
+
+.main-text h1{
+    color: var(--etc);
+    position: relative;
+    animation: slideBottom 1s ease forwards;
+}
+
+.main-text span{
+    color: rgb(17, 10, 50);
+}
+
+.main-text span::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 41%;
+    width: 100%;
+    background-color: var(--background);
+    animation: typing 1s steps(10) forwards;
+}
+
+.icons ul{
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.icons i {
+    position: relative;
+    color: var(--text);
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: calc(.2s * var(--t));
+}
+
+.icons i:hover{
+    text-shadow: 2px 2px 10px rgb(68, 68, 210);
+}
+
+/* Keyframes */
+
+@keyframes typing {
+    100%{
+        left: 100%;
+        margin: 0 -35px;
+    }
+}
+
+@keyframes slideToRight {
+    from{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    to{
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    from{
+        top: -90px;
+        opacity: 0;
+    }
+    to{
+        top: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    from{
+        top: 100%;
+        opacity: 0;
+    }
+    to{
+        top: 52%;
+        opacity: 1;
+    }
+}
