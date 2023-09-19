@@ -52,13 +52,14 @@ nav a {
 }
 
 .main{
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
     background-color: rgba(58, 127, 141, 0.2);
     border-radius: 20px;
     width: 80%;
     height: 522px;
-    margin: auto;
-    margin-top: 60px;
 }
 
 .photo img {
