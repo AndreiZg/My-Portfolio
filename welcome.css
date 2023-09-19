@@ -28,6 +28,7 @@ nav {
     background-color: rgba(0, 70, 84, 0.2);
     justify-content: center;
     clip-path: polygon(50% 0%, 100% 0, 82% 100%, 18% 100%, 0 0);
+    overflow: hidden;
 }
 
 nav ul {
@@ -49,6 +50,7 @@ nav a {
     animation-delay: calc(.2s * var(--i));
     cursor: pointer;
     color:white;
+    overflow: hidden;
 }
 
 .photo{
@@ -83,6 +85,7 @@ nav a {
     color: var(--etc);
     position: relative;
     animation: slideBottom 1s ease forwards;
+    overflow: hidden;
 }
 
 .main-text span{
@@ -111,6 +114,7 @@ nav a {
     opacity: 0;
     animation: slideBottom 1s ease forwards;
     animation-delay: calc(.2s * var(--t));
+    overflow: hidden;
 }
 
 .icons i:hover{
@@ -156,5 +160,111 @@ nav a {
     to{
         top: 52%;
         opacity: 1;
+    }
+}
+
+@media (max-width : 1240px) {
+    .photo{
+        left: 0%;
+        width: 450px;
+        height: 450px;
+    }
+    
+    .main-text{
+        position: absolute;
+        font-size: 3vw;
+        font-family: sans-serif;
+        top: 52%;
+        left: 70%;
+        transform: translate(-50%,-50%);
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    .photo img{
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        bottom: 0;
+    }
+}
+
+@media (max-width : 1110px){
+    .photo{
+        position: absolute;
+        left: 20%;
+        top: 52%;
+        transform: translate(-50%,-50%);
+        width: 350px;
+        height: 350px;
+        animation: none;
+    }
+    .photo img{
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        bottom: 0;
+    }
+    nav ul {
+        display: flex;
+        align-items: center;
+        gap: 4rem;
+        font-size: 17px;
+    }
+}
+
+
+@media (max-width:820px) {
+    .photo {
+        position: absolute;
+        top: 45%; /* Center vertically */
+        left: 45%; /* Center horizontally */
+        transform: translate(-50%, -50%);
+        width: 40vw;
+        height: 40vw;
+    }
+
+    .photo img {
+        position: absolute;
+        width: 35vw; /* Adjust the image size as needed */
+        height: 35vw; /* Maintain aspect ratio */
+    }
+    .main-text{
+        top: 85%; /* Vertically center the text */
+        left: 50%; /* Horizontally center the text */
+        transform: translate(-50%, -50%); /* Center the text */
+        animation: none;
+        font-size: 3vw;
+        text-align: center;
+    }
+}
+
+@media (max-width: 510px) {
+    .photo {
+        position: absolute;
+        top: 40%; /* Center vertically */
+        left: 40%; /* Center horizontally */
+        transform: translate(-50%, -50%);
+        width: 60vw;
+        height: 60vw;
+    }
+
+    .photo img {
+        position: absolute;
+        width: 50vw; /* Adjust the image size as needed */
+        height: 50vw; /* Maintain aspect ratio */
+    }
+    .main-text{
+        top: 72%; /* Vertically center the text */
+        left: 46%; /* Horizontally center the text */
+        transform: translate(-50%, -50%); /* Center the text */
+        animation: none;
+        font-size: 5vw;
+    }
+    
+    .main-text h1{
+        color: var(--etc);
+        position: relative;
+        animation: slideBottom 1s ease forwards;
+        overflow: hidden;
     }
 }
