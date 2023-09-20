@@ -9,14 +9,32 @@
 </head>
 <body>
     <header>
-        <nav class="navbar">
+        <nav class="navbar">               
+            <ul class="responsive">
+                <li class="logo">My Portfolio</li>
+            </ul>
+            <ul class="responsive btn">
+                <div class="burger-button">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </ul>
             <ul>
                 <li class="nav-items" style="--i:1"><a href="#">Home</a></li>
                 <li class="nav-items" style="--i:2"><a href="#">Projets</a></li>
                 <li class="nav-items" style="--i:3"><a href="#">About Me</a></li>
                 <li class="nav-items" style="--i:4"><a href="#">Contact</a></li>
             </ul>
-        </nav>
+        </nav>        
+        <div class="responsive">
+            <ul class="responsive-items">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Projets</a></li>
+                <li><a href="#">About Me</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
     </header>
     <main>
         <div class="container">
@@ -40,5 +58,13 @@
             </div>
         </div>
     </main>
+    
+    <script>
+        const burgerButton = document.querySelector('.burger-button');
+
+        burgerButton.addEventListener('click', () => {
+            burgerButton.classList.toggle('open');
+        });
+    </script>
 </body>
 </html>
