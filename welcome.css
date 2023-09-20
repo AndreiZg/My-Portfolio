@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,700&display=swap');
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -19,6 +21,7 @@ body{
     overflow: hidden;
 }
 
+/* Navbar */
 nav {
     display: flex;
     width: 100%;
@@ -89,7 +92,7 @@ nav a {
     transform: translateY(-12px) rotate(-45deg);
 }
 
-
+/* Main */
 .photo{
     position: absolute;
     bottom: 50px;
@@ -298,17 +301,24 @@ nav a {
         left: 120px;
         font-size: 4.3vw;
         font-family: 'Ubuntu', sans-serif;
+        color: var(--text);
     }
 
     .burger-button{
         display: flex;
         position: absolute;
         right: 100px;
+        cursor: pointer;
+    }
+
+    .burger-button .bar{
+        background-color: var(--etc);
     }
 
     .responsive-items{
+        position: absolute;
         display: block;
-        background-color: red;
+        background: linear-gradient(to bottom, rgba(4, 42, 88, 0.8), rgba(77, 166, 229, 0.5) 70.71%);
         color: white;
         list-style: none;
         text-decoration: none;
@@ -318,6 +328,9 @@ nav a {
         font-size: 20px;
         font-family: sans-serif;
         z-index: 2;
+        width: 100%;
+        left: -100%;
+        transition: 0.5s ease;
     }
 
     .responsive-items li{

@@ -28,7 +28,7 @@
             </ul>
         </nav>        
         <div class="responsive">
-            <ul class="responsive-items">
+            <ul class="responsive-items" id="items">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Projets</a></li>
                 <li><a href="#">About Me</a></li>
@@ -61,10 +61,18 @@
     
     <script>
         const burgerButton = document.querySelector('.burger-button');
+        let items = document.getElementById('items');
 
-        burgerButton.addEventListener('click', () => {
+        burgerButton.addEventListener('click', toggle);
+
+        function toggle(){
             burgerButton.classList.toggle('open');
-        });
+            if(burgerButton.classList.value != "burger-button open"){
+                items.style.left = "-100%";
+            } else{
+                items.style.left = "0";
+            }
+        }
     </script>
 </body>
 </html>
