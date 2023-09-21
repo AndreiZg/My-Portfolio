@@ -284,6 +284,19 @@ nav a {
         column-count: 2;
     }
 
+    
+
+    .photo img {
+        transform: scale(0.8);
+    }
+
+    .main{
+        background-color: rgba(0, 70, 84, 0.0);
+    }
+
+    .resp-main-text{
+        font-size: 2vw;
+    }
 }
 
 @media (max-width: 630px){
@@ -305,6 +318,10 @@ nav a {
 
     .responsive-part{
         font-size: 2.8vw;
+    }
+
+    .resp-main-text{
+        font-size: 2.6vw;
     }
 } 
 
