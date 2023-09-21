@@ -9,14 +9,32 @@
 </head>
 <body>
     <header>
-        <nav class="navbar">
-            <ul>
-                <li class="nav-items"><a href="#">Home</a></li>
-                <li class="nav-items"><a href="#">Projets</a></li>
-                <li class="nav-items"><a href="#">About Me</a></li>
-                <li class="nav-items"><a href="#">Contact</a></li>
+        <nav class="navbar">               
+            <ul class="responsive">
+                <li class="logo">My Portfolio</li>
             </ul>
-        </nav>
+            <ul class="responsive btn">
+                <div class="burger-button">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </ul>
+            <ul>
+                <li class="nav-items" style="--i:1"><a href="#">Home</a></li>
+                <li class="nav-items" style="--i:2"><a href="#">Projets</a></li>
+                <li class="nav-items" style="--i:3"><a href="#">About Me</a></li>
+                <li class="nav-items" style="--i:4"><a href="#">Contact</a></li>
+            </ul>
+        </nav>        
+        <div class="responsive">
+            <ul class="responsive-items" id="items">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Projets</a></li>
+                <li><a href="#">About Me</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
     </header>
     <div class="main">
         <div class="left-side">
@@ -50,5 +68,29 @@
             </div>
         </div>
     </div>
+    <div class="responsive-part">
+        <div class="resp-title">
+            <div class="res-lower-text">
+                <h2>Front-end Developer</h2>
+            </div>
+            <div class="resp-main-text">
+                Hello,
+                 I'm Andrei, a passionate frontend developer, living in Belgium and I'm 19 years old.
+                I am currently in the 6th grade at a technical informatic institute.<br>
+                <br>
+                My skills:<br>
+                <ul>
+                    <li>- HTML</li>
+                    <li>- CSS</li>
+                    <li>- JavaScript</li>
+                    <li>- React</li>
+                    <li>- Bootstrap</li>
+                    <li>- Scss/Sass</li>
+                    <li>- Tailwind CSS</li>
+                    <li>- Git</li>
+                </ul>
+            </div>
+        </div>
+    <script src="anim.js"></script>
 </body>
 </html>
