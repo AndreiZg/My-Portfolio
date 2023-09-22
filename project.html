@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="project.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">               
+            <ul class="responsive">
+                <li class="logo">My Portfolio</li>
+            </ul>
+            <ul class="responsive btn">
+                <div class="burger-button">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </ul>
+            <ul>
+                <li class="nav-items" style="--i:1"><a href="#">Home</a></li>
+                <li class="nav-items" style="--i:2"><a href="#">Projets</a></li>
+                <li class="nav-items" style="--i:3"><a href="#">About Me</a></li>
+                <li class="nav-items" style="--i:4"><a href="#">Contact</a></li>
+            </ul>
+        </nav>        
+        <div class="responsive">
+            <ul class="responsive-items" id="items">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Projets</a></li>
+                <li><a href="#">About Me</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="main">
+        <div class="container">
+            <ul class="projects">
+                <li>
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h1 class="title">Catering Website</h1>
+                                <p>Hover Me</p>
+                            </div>
+                            <div class="flip-card-back first">
+                                <h1 class="title">BACK</h1>
+                                <p> </p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="flip-card">
+                        <div class="flip-card-inner second">
+                            <div class="flip-card-front">
+                                <h1 class="title">Car Seller</h1>
+                                <p>Hover Me</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <h1 class="title">BACK</h1>
+                                <p> </p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h1 class="title">Third Project</h1>
+                                <p>Hover Me</p>
+                            </div>
+                            <div class="flip-card-back third">
+                                <h1 class="title"></h1>
+                                <p> </p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="anim.js"></script>
+</body>
+</html>
