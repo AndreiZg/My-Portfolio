@@ -26,7 +26,7 @@ body{
     left: 0;
     height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(5, 6, 7, 0.5)),url(mount-mont-blanc-covered-snow-reflecting-water-evening-chamonix-france.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(5, 6, 7, 0.5)),url(images/mount-mont-blanc-covered-snow-reflecting-water-evening-chamonix-france.jpg);
     z-index: -1;
     background-size: cover;
 }
@@ -198,7 +198,7 @@ nav a {
     font-family: sans-serif;
     width: 80%;
     margin: auto;
-    font-size: 30px;
+    font-size: 1.8vw;
     position: relative;
     top: 70px;
     color: white;
@@ -266,7 +266,7 @@ nav a {
         left: 120px;
         font-size: 4.3vw;
         font-family: 'Ubuntu', sans-serif;
-        color: var(--text);
+        color:white;
     }
 
     .burger-button{
@@ -277,7 +277,7 @@ nav a {
     }
 
     .burger-button .bar{
-        background-color: var(--etc);
+        background-color: white;
     }
 
     .responsive-items{
@@ -304,6 +304,66 @@ nav a {
 
     .responsive-items a {
         color: white;
+    }
+
+    .container{
+        height: 70%;
+    }
+
+    .elements label{
+        font-size: 2.5vw;
+        margin-left: 30px;
+        color: white;
+    }
+
+    .elements .left-side{
+        width: 100%;
+        height: 70%;
+        position: absolute;
+        top: 50px;
+    }
+
+    .submit{
+        position: relative;
+        width: max-content;
+        margin: auto;
+        top: 15px;
+    }
+    
+    .submit a{
+        border: 1px solid white;
+        color: white;
+        border-radius: 20px;
+        padding: 10px;
+        font-size: 15px;
+    }
+    
+
+    .right-side{
+        display: block;
+        width: 100%;
+        height: 30%;
+        background-color: transparent;
+    }
+
+    .my-elements{
+        position: absolute;
+        height: max-content;
+        margin: auto;
+        font-size: 1.8vw;
+        color: white;
+        bottom: 25px;
+        width: 100%;
+    }
+
+    .my-elements ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .my-elements li{
+        font-size: 2.2vw;
     }
 }
 
