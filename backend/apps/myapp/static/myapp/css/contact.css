@@ -327,7 +327,7 @@ nav a {
         margin: auto;
         top: 15px;
     }
-    
+
     .submit a{
         border: 1px solid white;
         color: white;
@@ -335,7 +335,7 @@ nav a {
         padding: 10px;
         font-size: 15px;
     }
-    
+
 
     .right-side{
         display: block;
@@ -390,7 +390,7 @@ nav a {
     .right-side li{
         font-size: 3.5vw;
     }
-} 
+}
 
 @media (max-width: 510px) {
     nav .logo{
@@ -417,7 +417,7 @@ nav a {
         font-size: 15px;
         padding: 5px;
     }
-    
+
     .elements textarea{
         width: 90%;
         margin-left: 10px;

@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
-
 *{
     margin: 0;
     padding: 0;
@@ -17,6 +15,7 @@
 }
 
 body{
+    background-color: var(--background);
     overflow: hidden;
 }
 
@@ -24,7 +23,6 @@ body{
 nav {
     display: flex;
     width: 100%;
-
     height: 90px;
     width: 70%;
     margin: auto;
@@ -91,111 +89,57 @@ nav a {
 .burger-button.open .bar:nth-child(3) {
     transform: translateY(-12px) rotate(-45deg);
 }
-.container {
+
+
+.main{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    width: 60vw;
-    border-radius: 10px;
-    height: 500px;
-    box-shadow: 2px 2px 10px var(--background);
-}
-
-.container::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    backdrop-filter: blur(10px); /* Adjust the blur radius as needed */
-    z-index: -1;
-  }
-
-.container .title{
-    position: relative;
-    text-align: center;
-    top:25px;
-    font-size: 1.5vw;
-    color: white;
-}
-
-.elements .left-side{
-    width: 50%;
-    height: 80%;
-    position: absolute;
-    bottom: 0;
-}
-
-.elements label{
-    font-size: 1.5vw;
-    margin-left: 30px;
-    color: white;
-}
-
-.elements input{
-    width: 90%;
-    margin-left: 20px;
-    height: 40px;
+    background-color: rgba(58, 127, 141, 0.2);
     border-radius: 20px;
-    border: 1px solid white;
-    background-color: transparent;
-    font-size: 17px;
-    padding: 5px;
-    color: white;
-}
-
-.elements textarea{
-    width: 90%;
-    margin-left: 20px;
-    height: 100%;
-    border-radius: 20px;
-    resize: none;
-    padding: 5px;
-    font-family: sans-serif;
-    border: 1px solid white;
-    background-color: transparent;
-    color: white;
-}
-
-.submit{
-    position: relative;
-    width: 50px;
-    margin: auto;
-    top: 15px;
-}
-
-.submit a{
-    border: 1px solid white;
-    color: white;
-    border-radius: 30px;
-    width: 150px;
-    padding: 10px;
-    font-size: 20px;
-    font-family: sans-serif;
-}
-
-.right-side{
-    width: 50%;
-    height: 80%;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-}
-
-.my-elements{
-    font-family: sans-serif;
     width: 80%;
-    margin: auto;
-    font-size: 1.8vw;
-    position: relative;
-    top: 70px;
-    color: white;
+    height: 522px;
 }
 
-.my-elements ul{
-    margin: 10px;
+.photo img {
+    width: 400px;
+    height: 102%;
+}
+
+.title h1{
+    font-family: sans-serif;
+    position: absolute;
+    top: 50px;
+    font-size: 3.6vw;
+    margin-left: 450px;
+    color: var(--text);
+}
+
+.title .lower-text{
+    font-family: sans-serif;
+    position: absolute;
+    top: 130px;
+    font-size: 1vw;
+    margin-left: 450px;
+    color: var(--etc);
+}
+
+.title .main-text{
+    font-family: sans-serif;
+    position: absolute;
+    top: 170px;
+    font-size: 1.7vw;
+    margin-left: 450px;
+    color: rgb(5, 19, 21);
+}
+
+.title ul{
+    column-count: 2;
+}
+
+.responsive-part{
+    display: none;
 }
 
 @keyframes slideTop {
@@ -256,7 +200,7 @@ nav a {
         left: 120px;
         font-size: 4.3vw;
         font-family: 'Ubuntu', sans-serif;
-        color:white;
+        color: var(--text);
     }
 
     .burger-button{
@@ -267,7 +211,7 @@ nav a {
     }
 
     .burger-button .bar{
-        background-color: white;
+        background-color: var(--etc);
     }
 
     .responsive-items{
@@ -296,73 +240,62 @@ nav a {
         color: white;
     }
 
-    .container{
-        height: 70%;
-    }
-
-    .elements label{
-        font-size: 2.5vw;
-        margin-left: 30px;
-        color: white;
-    }
-
-    .elements input{
-        margin-top: 5px;
-    }
-
-    .elements textarea{
-        margin-top: 5px;
-    }
-
-    .elements .left-side{
-        width: 100%;
-        height: 70%;
+    .main{
         position: absolute;
-        top: 50px;
+        border-radius: 20px;
+        width: max-content;
+        height: 522px;
+        top: 43%;
     }
 
-    .submit{
-        position: relative;
-        width: max-content;
-        margin: auto;
-        top: 15px;
+    .photo img {
+        width: 400px;
+        height: 102%;
+        border-radius: 10px;
     }
-    
-    .submit a{
-        border: 1px solid white;
-        color: white;
-        border-radius: 20px;
-        padding: 10px;
-        font-size: 15px;
-    }
-    
 
     .right-side{
+        display: none;
+    }
+
+    .responsive-part{
         display: block;
-        width: 100%;
-        height: 30%;
-        background-color: transparent;
-        margin-bottom: 40px;
-    }
-
-    .my-elements{
+        text-align: center;
         position: absolute;
-        height: max-content;
-        margin: auto;
-        font-size: 1.8vw;
-        color: white;
-        bottom: 25px;
-        width: 100%;
+        bottom: 20px;
+        width: 90%;
+        font-size: 2.5vw;
+        background-color: transparent;
+        margin-left: 40px;
+        margin-right: 40px;
     }
 
-    .my-elements ul{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .res-lower-text h2{
+        color: var(--etc);
+        font-family: sans-serif;
     }
 
-    .my-elements li{
-        font-size: 2.2vw;
+    .resp-main-text{
+        color: rgb(5, 19, 21);
+        font-family: sans-serif;
+    }
+
+    .resp-title ul{
+        column-count: 2;
+    }
+
+
+
+    .photo img {
+        transform: scale(0.8);
+    }
+
+    .main{
+        background-color: rgba(0, 70, 84, 0.0);
+    }
+
+    .resp-main-text{
+        font-size: 2vw;
     }
 }
 
@@ -383,14 +316,14 @@ nav a {
         width: 32px;
     }
 
-    .left-side label{
-        font-size: 3.6vw;
+    .responsive-part{
+        font-size: 2.8vw;
     }
 
-    .right-side li{
-        font-size: 3.5vw;
+    .resp-main-text{
+        font-size: 2.6vw;
     }
-} 
+}
 
 @media (max-width: 510px) {
     nav .logo{
@@ -409,34 +342,39 @@ nav a {
         width: 32px;
     }
 
-@media (max-width: 420px){
-    .elements input{
-        width: 90%;
-        margin-left: 10px;
-        height: 30px;
-        font-size: 15px;
-        padding: 5px;
-    }
-    
-    .elements textarea{
-        width: 90%;
-        margin-left: 10px;
-        height: 100%;
-        border-radius: 20px;
-        resize: none;
-        padding: 5px;
+    .responsive-part{
+        font-size: 3.6vw;
     }
 
-    .elements label{
-        margin-left: 20px;
-        color: white;
+    .photo img {
+        transform: scale(0.8);
     }
 
-    .title h1{
-        font-size: 5vw;
+    .main{
+        background-color: rgba(0, 70, 84, 0.0);
     }
 
-    .elements{
-        margin-top: 20px;
+    @media (max-width: 420px){
+        .responsive-part{
+            bottom: 80px;
+            left: -25px;
+        }
+
+    @media (max-width: 330px) {
+        .photo{
+            transform: scale(0.7);
+        }
+
+        .burger-button{
+            display: flex;
+            position: absolute;
+            right: 35px;
+            height: 23px;
+            width: 26px;
+        }
+
+        nav .logo{
+            left: 40px;
+        }
     }
 }}
