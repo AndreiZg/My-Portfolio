@@ -95,12 +95,15 @@ nav a {
 /* Main */
 .photo{
     position: absolute;
-    bottom: 50px;
+    top: 56%;
+    left: 20%;
+    transform: translate(-50%,-50%);
     margin-left: 30px;
     width: 500px;
     height: 500px;
     background-color: rgba(58, 127, 141, 0.2);
     clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+    animation: slideToRight 1s ease forwards;
 }
 .photo img{
     position: absolute;
@@ -170,11 +173,11 @@ nav a {
 
 @keyframes slideToRight {
     from{
-        transform: translateX(-100px);
+        left: -20%;
         opacity: 0;
     }
     to{
-        transform: translate(0);
+        left: 20%;
         opacity: 1;
     }
 }
