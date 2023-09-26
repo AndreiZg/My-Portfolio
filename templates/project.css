@@ -232,6 +232,21 @@ nav a {
     }
 }
 
+@media (max-width : 1470px){
+    .flip-card {
+        background-color: transparent;
+        width: 350px;
+        height: 350px;
+      }
+}
+
+@media (max-width : 1300px){
+    .flip-card {
+        background-color: transparent;
+        width: 350px;
+        height: 350px;
+      }
+}
 
 @media (max-width : 1110px){
     nav ul {

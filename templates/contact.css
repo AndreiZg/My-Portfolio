@@ -393,6 +393,14 @@ nav a {
         height: 26px;
         width: 32px;
     }
+
+    .left-side label{
+        font-size: 3.6vw;
+    }
+
+    .right-side li{
+        font-size: 3.5vw;
+    }
 } 
 
 @media (max-width: 510px) {
@@ -413,4 +421,33 @@ nav a {
     }
 
 @media (max-width: 420px){
+    .elements input{
+        width: 90%;
+        margin-left: 10px;
+        height: 30px;
+        font-size: 15px;
+        padding: 5px;
+    }
+    
+    .elements textarea{
+        width: 90%;
+        margin-left: 10px;
+        height: 100%;
+        border-radius: 20px;
+        resize: none;
+        padding: 5px;
+    }
+
+    .elements label{
+        margin-left: 20px;
+        color: white;
+    }
+
+    .title h1{
+        font-size: 5vw;
+    }
+
+    .elements{
+        margin-top: 20px;
+    }
 }}
