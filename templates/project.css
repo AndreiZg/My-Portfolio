@@ -241,11 +241,50 @@ nav a {
 }
 
 @media (max-width : 1300px){
+    .container ul{
+        display: flex;
+        margin: 40px;
+    }
+
+    .my-projects h1{
+        font-size: 4vw;
+    }
+}
+
+@media (max-width : 1220px){
+    body{
+        overflow: visible;
+    }
     .flip-card {
         background-color: transparent;
-        width: 350px;
-        height: 350px;
-      }
+        width: 500px;
+        animation: none;
+        height: 330px;
+        opacity: 1;
+    }
+
+    .container ul{
+        display: flex;
+        margin: 30px;
+    }
+
+    .my-projects h1{
+        font-size: 4vw;
+    }
+    
+    .flip-card-front h1{
+        font-size: 2vw;
+    }
+
+    .container{
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        display: flex;
+        animation: none;
+        flex-direction: column;
+    }
 }
 
 @media (max-width : 1110px){
@@ -254,6 +293,10 @@ nav a {
         align-items: center;
         gap: 4rem;
         font-size: 17px;
+    }
+
+    .flip-card-front h1{
+        font-size: 3vw;
     }
 }
 
@@ -284,6 +327,23 @@ nav a {
         font-size: 4.3vw;
         font-family: 'Ubuntu', sans-serif;
         color: var(--text);
+    }
+
+    .flip-card {
+        background-color: transparent;
+        width: 450px;
+        animation: none;
+        height: 330px;
+        opacity: 1;
+    }
+
+    
+    .flip-card-front h1{
+        font-size: 3.4vw;
+    }
+
+    .my-projects h1{
+        font-size: 5vw;
     }
 
     .burger-button{
@@ -340,6 +400,11 @@ nav a {
         height: 26px;
         width: 32px;
     }
+
+    .flip-card {
+        width: 400px;
+    }
+
 } 
 
 @media (max-width: 510px) {
@@ -359,5 +424,51 @@ nav a {
         width: 32px;
     }
 
+    .flip-card {
+        width: 360px;
+        height: 300px;
+    }
+
 @media (max-width: 420px){
+    .flip-card {
+        width: 300px;
+        height: 250px;
+    }
+
+    .my-projects h1{
+        font-size: 7vw;
+    }
+
+    .container{
+        top: 70%;
+        left: 50%;
+    }
+
+    @media (max-width: 330px) {
+        .burger-button{
+            display: flex;
+            position: absolute;
+            right: 35px;
+            height: 23px;
+            width: 26px;
+        }
+
+        nav .logo{
+            left: 40px;
+        }
+    }
+
+    .flip-card {
+        width: 200px;
+        height: 200px;
+    }
+
+    .my-projects h1{
+        font-size: 7vw;
+    }
+
+    .container{
+        top: 60%;
+        left: 50%;
+    }
 }}
