@@ -1,0 +1,411 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root{
+    --background : #89C2D9;
+    --text : #014F86;
+    --btn : #2C7DA0;
+    --elements : #013A63;
+    --etc : #012A4A;
+}
+
+body{
+    background-color: var(--background);
+    overflow: hidden;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    width: 100%;
+    height: 90px;
+    width: 70%;
+    margin: auto;
+    background-color: rgba(0, 70, 84, 0.2);
+    justify-content: center;
+    clip-path: polygon(50% 0%, 100% 0, 82% 100%, 18% 100%, 0 0);
+    overflow: hidden;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 6rem;
+    font-size: 20px;
+}
+
+nav li {
+    color: white;
+    font-family: sans-serif;
+}
+
+nav a {
+    position: relative;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+    cursor: pointer;
+    color:white;
+}
+
+.burger-button {
+    width: 40px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    display: none;
+}
+
+.logo{
+    display: none;
+}
+
+.responsive-items{
+    display: none;
+}
+
+.bar {
+    width: 100%;
+    height: 5px;
+    background-color: #333;
+    transition: transform 0.3s ease;
+}
+
+.burger-button.open .bar:nth-child(1) {
+    transform: translateY(12px) rotate(45deg);
+}
+
+.burger-button.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-button.open .bar:nth-child(3) {
+    transform: translateY(-12px) rotate(-45deg);
+}
+
+/* Main */
+.photo{
+    position: absolute;
+    top: 56%;
+    left: 20%;
+    transform: translate(-50%,-50%);
+    margin-left: 30px;
+    width: 500px;
+    height: 500px;
+    background-color: rgba(58, 127, 141, 0.2);
+    clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+    animation: slideToRight 1s ease forwards;
+}
+.photo img{
+    position: absolute;
+    width: 450px;
+    height: 440px;
+    bottom: 0;
+}
+
+.main-text{
+    position: absolute;
+    text-align: center;
+    font-size: 2.8rem;
+    font-family: sans-serif;
+    top: 52%;
+    left: 70%;
+    transform: translate(-50%,-50%);
+}
+
+.main-text h1{
+    color: var(--etc);
+    position: relative;
+    animation: slideBottom 1s ease forwards;
+    overflow: hidden;
+}
+
+.main-text span{
+    color: rgb(17, 10, 50);
+}
+
+.main-text span::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 41%;
+    width: 100%;
+    background-color: var(--background);
+    animation: typing 1s steps(10) forwards;
+}
+
+.icons ul{
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.icons i {
+    position: relative;
+    color: var(--text);
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: calc(.2s * var(--t));
+    overflow: hidden;
+}
+
+.icons i:hover{
+    text-shadow: 2px 2px 10px rgb(68, 68, 210);
+}
+
+/* Keyframes */
+
+@keyframes typing {
+    100%{
+        left: 100%;
+        margin: 0 -35px;
+    }
+}
+
+@keyframes slideToRight {
+    from{
+        left: -20%;
+        opacity: 0;
+    }
+    to{
+        left: 20%;
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    from{
+        top: -90px;
+        opacity: 0;
+    }
+    to{
+        top: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    from{
+        top: 100%;
+        opacity: 0;
+    }
+    to{
+        top: 52%;
+        opacity: 1;
+    }
+}
+
+
+@media (max-width : 1240px) {
+    .photo{
+        left: 0%;
+        width: 450px;
+        height: 450px;
+    }
+
+    .main-text{
+        position: absolute;
+        font-size: 3vw;
+        font-family: sans-serif;
+        top: 52%;
+        left: 70%;
+        transform: translate(-50%,-50%);
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    .photo img{
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        bottom: 0;
+    }
+}
+
+@media (max-width : 1110px){
+    .photo{
+        position: absolute;
+        left: 20%;
+        top: 52%;
+        transform: translate(-50%,-50%);
+        width: 350px;
+        height: 350px;
+        animation: none;
+        z-index: -1;
+    }
+    .photo img{
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        bottom: 0;
+    }
+    nav ul {
+        display: flex;
+        align-items: center;
+        gap: 4rem;
+        font-size: 17px;
+    }
+}
+
+
+@media (max-width:820px) {
+    .photo {
+        position: absolute;
+        top: 45%; /* Center vertically */
+        left: 45%; /* Center horizontally */
+        transform: translate(-50%, -50%);
+        width: 40vw;
+        height: 40vw;
+    }
+
+    .photo img {
+        position: absolute;
+        width: 35vw; /* Adjust the image size as needed */
+        height: 35vw; /* Maintain aspect ratio */
+    }
+    .main-text{
+        top: 85%; /* Vertically center the text */
+        left: 50%; /* Horizontally center the text */
+        transform: translate(-50%, -50%); /* Center the text */
+        animation: none;
+        font-size: 3vw;
+        text-align: center;
+    }
+
+    nav {
+        position: relative;
+        justify-content: start;
+    }
+
+    nav .nav-items{
+        display: none;
+    }
+
+    nav ul{
+        display: flex;
+        align-items: center;
+        gap: 0;
+        font-size: 20px;
+        animation: none;
+        margin: auto;
+    }
+
+    nav .logo{
+        display: flex;
+        position: absolute;
+        left: 120px;
+        font-size: 4.3vw;
+        font-family: 'Ubuntu', sans-serif;
+        color: var(--text);
+    }
+
+    .burger-button{
+        display: flex;
+        position: absolute;
+        right: 100px;
+        cursor: pointer;
+    }
+
+    .burger-button .bar{
+        background-color: var(--etc);
+    }
+
+    .responsive-items{
+        position: absolute;
+        display: block;
+        background: linear-gradient(to bottom, rgba(4, 42, 88, 0.8), rgba(77, 166, 229, 0.5) 70.71%);
+        color: white;
+        list-style: none;
+        text-decoration: none;
+        width: 300px;
+        margin: auto;
+        text-align: center;
+        font-size: 20px;
+        font-family: sans-serif;
+        z-index: 2;
+        width: 100%;
+        left: -100%;
+        transition: 0.5s ease;
+    }
+
+    .responsive-items li{
+        padding: 40px;
+    }
+
+    .responsive-items a {
+        color: white;
+    }
+}
+
+@media (max-width: 630px){
+    nav .logo{
+        display: flex;
+        position: absolute;
+        left: 100px;
+        font-size: 4.3vw;
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    .burger-button{
+        display: flex;
+        position: absolute;
+        right: 90px;
+        height: 26px;
+        width: 32px;
+    }
+}
+
+@media (max-width: 510px) {
+    nav .logo{
+        display: flex;
+        position: absolute;
+        left: 60px;
+        font-size: 4.3vw;
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    .burger-button{
+        display: flex;
+        position: absolute;
+        right: 60px;
+        height: 26px;
+        width: 32px;
+    }
+    .photo {
+        position: absolute;
+        top: 40%; /* Center vertically */
+        left: 40%; /* Center horizontally */
+        transform: translate(-50%, -50%);
+        width: 60vw;
+        height: 60vw;
+    }
+
+    .photo img {
+        position: absolute;
+        width: 50vw; /* Adjust the image size as needed */
+        height: 50vw; /* Maintain aspect ratio */
+    }
+    .main-text{
+        top: 72%; /* Vertically center the text */
+        left: 46%; /* Horizontally center the text */
+        transform: translate(-50%, -50%); /* Center the text */
+        animation: none;
+        font-size: 5vw;
+    }
+    .main-text h1{
+        color: var(--etc);
+        position: relative;
+        animation: slideBottom 1s ease forwards;
+        overflow: hidden;
+    }
+}
+
+/*...*/
