@@ -55,7 +55,17 @@
             </ul>
         </div>
     </header>
-<form>
+{% if messages %}
+    <div>
+		{% for message in messages %}
+			<div class="alert {% if message.tags %}
+			alert-{{ message.tags }}{% endif %}">
+				{{ message }}
+			</div>
+		{% endfor %}
+    </div>
+{% endif %}
+<form method="post">
 {% csrf_token %}
     <main>
         <div class="container">
@@ -66,18 +76,18 @@
                 <div class="left-side">
                     <div class="email">
                         <label for="email">Email</label><br>
-                        <input type="email">
+                        {{ form.email }}
                     </div>
                     <div class="sujet">
                         <label for="sujet">Subject</label><br>
-                        <input type="text">
+                        {{ form.subject }}
                     </div>
                     <div class="message">
                         <label for="message">Message</label><br>
-                        <textarea cols="30" rows="10"></textarea>
+                        {{ form.message }}
                     </div>
                     <div class="submit">
-                        <a href="#">Submit</a>
+                        <button type="submit">Submit</button>
                     </div>
                 </div>
                 <div class="right-side">

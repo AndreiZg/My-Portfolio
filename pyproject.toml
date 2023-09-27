@@ -9,6 +9,7 @@ readme = "README.md"
 python = "^3.11"
 django = "^4.2.5"
 whitenoise = "^6.5.0"
+python-dotenv = "^1.0.0"
 
 
 [build-system]
