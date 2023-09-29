@@ -137,10 +137,10 @@ nav a {
     content: "";
     position: absolute;
     left: 0;
-    height: 41%;
+    height: 44%;
     width: 100%;
     background-color: var(--background);
-    animation: typing 1s steps(10) forwards;
+    animation: typing 1s steps(13) forwards;
 }
 
 .icons ul{
@@ -166,7 +166,7 @@ nav a {
 
 @keyframes typing {
     100%{
-        left: 100%;
+        left: 130%;
         margin: 0 -35px;
     }
 }
@@ -406,6 +406,32 @@ nav a {
         animation: slideBottom 1s ease forwards;
         overflow: hidden;
     }
+
+    .icons ul{
+        display: flex;
+        flex-flow: row wrap;
+        font-size: 7vw;
+    }
+
+    @media (max-width: 420px){
+        .responsive-part{
+            bottom: 80px;
+            left: -25px;
+        }
+
+    @media (max-width: 330px) {
+        .burger-button{
+            display: flex;
+            position: absolute;
+            right: 35px;
+            height: 23px;
+            width: 26px;
+        }
+
+        nav .logo{
+            left: 40px;
+        }
+    }}
 }
 
 /*...*/

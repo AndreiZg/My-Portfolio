@@ -20,6 +20,17 @@ body{
     overflow: hidden;
 }
 
+.bgr{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(5, 6, 7, 0.5)),url(images/mount-mont-blanc-covered-snow-reflecting-water-evening-chamonix-france.jpg);
+    z-index: -1;
+    background-size: cover;
+}
+
 /* Navbar */
 nav {
     display: flex;
@@ -91,6 +102,22 @@ nav a {
 .burger-button.open .bar:nth-child(3) {
     transform: translateY(-12px) rotate(-45deg);
 }
+
+/* Main */
+
+.message1{
+    position: relative;
+    color: white;
+    width: max-content;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.message1 h2{
+    font-size: 2.2vw;
+    font-family: sans-serif;
+}
+
 .container {
     position: absolute;
     top: 50%;
@@ -161,19 +188,21 @@ nav a {
 
 .submit{
     position: relative;
-    width: 50px;
+    width: max-content;
     margin: auto;
-    top: 15px;
+    top: 5px;
 }
 
-.submit a{
+.submit button{
     border: 1px solid white;
+    background-color: transparent;
     color: white;
     border-radius: 30px;
-    width: 150px;
+    width: 9vw;
     padding: 10px;
-    font-size: 20px;
+    font-size: 16px;
     font-family: sans-serif;
+    cursor: pointer;
 }
 
 .right-side{
@@ -227,6 +256,16 @@ nav a {
         align-items: center;
         gap: 4rem;
         font-size: 17px;
+    }
+
+    .message1{
+        color: white;
+        text-align: center;
+        margin-top: 50px;
+    }
+    
+    .message1 h2{
+        font-size: 2.4vw;
     }
 }
 
@@ -296,6 +335,10 @@ nav a {
         color: white;
     }
 
+    .message1{
+        margin-top: 20px;
+    }
+
     .container{
         height: 70%;
     }
@@ -325,14 +368,16 @@ nav a {
         position: relative;
         width: max-content;
         margin: auto;
-        top: 15px;
+        top: 5px;
     }
     
-    .submit a{
+    .submit button{
         border: 1px solid white;
         color: white;
+        background-color: transparent;
         border-radius: 20px;
         padding: 10px;
+        width: 15vw;
         font-size: 15px;
     }
     
@@ -390,6 +435,14 @@ nav a {
     .right-side li{
         font-size: 3.5vw;
     }
+
+    .submit button{
+        width: 18vw;
+    }
+    
+    .message1 h2{
+        font-size: 2.8vw;
+    }
 } 
 
 @media (max-width: 510px) {
@@ -407,6 +460,14 @@ nav a {
         right: 60px;
         height: 26px;
         width: 32px;
+    }
+
+    .submit button{
+        width: 22vw;
+    }
+
+    .message1 h2{
+        font-size: 3.6vw;
     }
 
 @media (max-width: 420px){
@@ -439,4 +500,32 @@ nav a {
     .elements{
         margin-top: 20px;
     }
-}}
+
+    .submit button{
+        width: 27vw;
+    }
+
+    @media (max-width: 420px){
+        .responsive-part{
+            bottom: 80px;
+            left: -25px;
+        }
+        
+    @media (max-width: 330px) {
+        .photo{
+            transform: scale(0.7);
+        }
+
+        .burger-button{
+            display: flex;
+            position: absolute;
+            right: 35px;
+            height: 23px;
+            width: 26px;
+        }
+
+        nav .logo{
+            left: 40px;
+        }
+    }
+}}}

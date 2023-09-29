@@ -1,0 +1,118 @@
+{% extends 'apps.myapp/base.html' %}
+{% load static %}
+
+{% block extrahead %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'myapp/css/projects.css' %}">
+    <title>Projects</title>
+    <style>
+        .first{
+            background: url("{% static 'myapp/images/pizza.png' %}");
+            background-color: var(--etc);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .second{
+            background: url("{% static 'myapp/images/supra.jpg' %}");
+            border-radius: 20px;
+            background-color: var(--etc);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .third{
+            background: url("{% static 'myapp/images/travelling.jpg' %}");
+            background-color: var(--etc);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <header>
+        <nav class="navbar">
+            <ul class="responsive">
+                <li class="logo">My Portfolio</li>
+            </ul>
+            <ul class="responsive btn">
+                <div class="burger-button">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </ul>
+            <ul>
+                <li class="nav-items" style="--i:1"><a href="{% url 'welcome' %}">Home</a></li>
+                <li class="nav-items" style="--i:3"><a href="{% url 'about' %}">About Me</a></li>
+                <li class="nav-items" style="--i:4"><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="responsive">
+            <ul class="responsive-items" id="items">
+                <li><a href="{% url 'welcome' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About Me</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="main">
+        <div class="my-projects"><h1>My Projects</h1></div>
+        <div class="container">
+            <ul class="projects">
+                <li>
+                    <div class="flip-card" style="--t:1">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h1 class="title">Catering Website</h1>
+                                <p>Hover Me</p>
+                            </div>
+                            <div class="flip-card-back first">
+                                <h1 class="title"></h1>
+                                <p> </p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <ul class="projects">
+                <li>
+                    <div class="flip-card" style="--t:2">
+                        <div class="flip-card-inner second">
+                            <div class="flip-card-front">
+                                <h1 class="title">Car Seller</h1>
+                                <p>Hover Me</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <h1 class="title">Coming soon...</h1>
+                                <p> </p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <ul class="projects">
+                <li>
+                    <div class="flip-card" style="--t:3">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h1 class="title">Cyprus Page</h1>
+                                <p>Hover Me</p>
+                            </div>
+                            <div class="flip-card-back third">
+                                <h1 class="title"></h1>
+                                <p> </p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="{% static 'myapp/js/anim.js' %}"></script>
+{% endblock %}

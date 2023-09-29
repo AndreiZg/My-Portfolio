@@ -139,11 +139,11 @@ nav a {
     transition: transform 0.8s;
     transform-style: preserve-3d;
   }
-  
+
   .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
   }
-  
+
   .flip-card-front, .flip-card-back {
     box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
     position: absolute;
@@ -157,33 +157,16 @@ nav a {
     border: 1px solid rgb(255, 255, 255);
     border-radius: 1rem;
   }
-  
+
   .flip-card-front {
     background: var(--etc);
     color: white;
   }
-  
+
   .flip-card-back {
     color: white;
     transform: rotateY(180deg);
     z-index: -1;
-  }
-
-  .first{
-    background: url(images/pizza.png);
-    background-color: var(--etc);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
-
-  .second{
-    background: url(images/supra.jpg);
-    border-radius: 20px;
-    background-color: var(--etc);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
   }
 
   .second::before {
@@ -196,14 +179,6 @@ nav a {
     height: 100%;
     backdrop-filter: blur(5px); /* Adjust the blur radius as needed */
     z-index: -1;
-  }
-
-  .third{
-    background: url(images/msg762167190-75134.jpg);
-    background-color: var(--etc);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
   }
 
   .flip-card h1{
@@ -241,50 +216,11 @@ nav a {
 }
 
 @media (max-width : 1300px){
-    .container ul{
-        display: flex;
-        margin: 40px;
-    }
-
-    .my-projects h1{
-        font-size: 4vw;
-    }
-}
-
-@media (max-width : 1220px){
-    body{
-        overflow: visible;
-    }
     .flip-card {
         background-color: transparent;
-        width: 500px;
-        animation: none;
-        height: 330px;
-        opacity: 1;
-    }
-
-    .container ul{
-        display: flex;
-        margin: 30px;
-    }
-
-    .my-projects h1{
-        font-size: 4vw;
-    }
-
-    .flip-card-front h1{
-        font-size: 2vw;
-    }
-
-    .container{
-        position: absolute;
-        top: 80%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        display: flex;
-        animation: none;
-        flex-direction: column;
-    }
+        width: 350px;
+        height: 350px;
+      }
 }
 
 @media (max-width : 1110px){
@@ -293,10 +229,6 @@ nav a {
         align-items: center;
         gap: 4rem;
         font-size: 17px;
-    }
-
-    .flip-card-front h1{
-        font-size: 3vw;
     }
 }
 
@@ -327,23 +259,6 @@ nav a {
         font-size: 4.3vw;
         font-family: 'Ubuntu', sans-serif;
         color: var(--text);
-    }
-
-    .flip-card {
-        background-color: transparent;
-        width: 450px;
-        animation: none;
-        height: 330px;
-        opacity: 1;
-    }
-
-
-    .flip-card-front h1{
-        font-size: 3.4vw;
-    }
-
-    .my-projects h1{
-        font-size: 5vw;
     }
 
     .burger-button{
@@ -400,11 +315,6 @@ nav a {
         height: 26px;
         width: 32px;
     }
-
-    .flip-card {
-        width: 400px;
-    }
-
 }
 
 @media (max-width: 510px) {
@@ -424,51 +334,5 @@ nav a {
         width: 32px;
     }
 
-    .flip-card {
-        width: 360px;
-        height: 300px;
-    }
-
 @media (max-width: 420px){
-    .flip-card {
-        width: 300px;
-        height: 250px;
-    }
-
-    .my-projects h1{
-        font-size: 7vw;
-    }
-
-    .container{
-        top: 70%;
-        left: 50%;
-    }
-
-    @media (max-width: 330px) {
-        .burger-button{
-            display: flex;
-            position: absolute;
-            right: 35px;
-            height: 23px;
-            width: 26px;
-        }
-
-        nav .logo{
-            left: 40px;
-        }
-    }
-
-    .flip-card {
-        width: 200px;
-        height: 200px;
-    }
-
-    .my-projects h1{
-        font-size: 7vw;
-    }
-
-    .container{
-        top: 60%;
-        left: 50%;
-    }
 }}

@@ -25,14 +25,14 @@
                 </div>
             </ul>
             <ul>
-                <li class="nav-items" style="--i:2"><a href="#">Projects</a></li>
+                <li class="nav-items" style="--i:2"><a href="{% url 'projects' %}">Projects</a></li>
                 <li class="nav-items" style="--i:3"><a href="{% url 'about' %}">About Me</a></li>
                 <li class="nav-items" style="--i:4"><a href="{% url 'contact' %}">Contact</a></li>
             </ul>
         </nav>
         <div class="responsive">
             <ul class="responsive-items" id="items">
-                <li><a href="#">Projects</a></li>
+                <li><a href="{% url 'projects' %}">Projects</a></li>
                 <li><a href="{% url 'about' %}">About Me</a></li>
                 <li><a href="{% url 'contact' %}">Contact</a></li>
             </ul>
