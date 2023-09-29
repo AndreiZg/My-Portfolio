@@ -504,4 +504,28 @@ nav a {
     .submit button{
         width: 27vw;
     }
-}}
+
+    @media (max-width: 420px){
+        .responsive-part{
+            bottom: 80px;
+            left: -25px;
+        }
+        
+    @media (max-width: 330px) {
+        .photo{
+            transform: scale(0.7);
+        }
+
+        .burger-button{
+            display: flex;
+            position: absolute;
+            right: 35px;
+            height: 23px;
+            width: 26px;
+        }
+
+        nav .logo{
+            left: 40px;
+        }
+    }
+}}}
