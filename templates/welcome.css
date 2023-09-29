@@ -394,11 +394,11 @@ nav a {
         height: 50vw; /* Maintain aspect ratio */
     }
     .main-text{
-        top: 72%; /* Vertically center the text */
+        top: 76%; /* Vertically center the text */
         left: 46%; /* Horizontally center the text */
         transform: translate(-50%, -50%); /* Center the text */
         animation: none;
-        font-size: 5vw;
+        font-size: 4vw;
     }
     .main-text h1{
         color: var(--etc);
@@ -410,7 +410,7 @@ nav a {
     .icons ul{
         display: flex;
         flex-flow: row wrap;
-        font-size: 7vw;
+        font-size: 6.5vw;
     }
 
     @media (max-width: 420px){
