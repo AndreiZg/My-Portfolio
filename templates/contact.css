@@ -122,10 +122,11 @@ nav a {
     position: absolute;
     top: 50%;
     left: 50%;
+    margin-top: 10px;
     transform: translate(-50%,-50%);
     width: 60vw;
     border-radius: 10px;
-    height: 500px;
+    height: 540px;
     box-shadow: 2px 2px 10px var(--background);
 }
 
