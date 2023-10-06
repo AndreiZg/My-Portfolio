@@ -166,7 +166,7 @@ nav a {
   .flip-card-back {
     color: white;
     transform: rotateY(180deg);
-    z-index: -1;
+    z-index: 2;
   }
 
   .first{
@@ -403,6 +403,14 @@ nav a {
 
     .flip-card {
         width: 400px;
+    }
+
+    .flip-card-back h1{
+        font-size: 8vw;
+    }
+
+    .flip-card-front h1{
+        font-size: 6vw;
     }
 
 } 
