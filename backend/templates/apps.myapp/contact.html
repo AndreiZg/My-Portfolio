@@ -54,15 +54,6 @@
             </ul>
         </div>
     </header>
-    <div class="message1">
-        <h2>
-            {% if messages %}
-                {% for message in messages %}
-                    {{message}}
-                {% endfor %}
-            {% endif %}
-        </h2>
-    </div>
     <form method="post">
         {% csrf_token %}
     <main>
@@ -74,15 +65,15 @@
                 <div class="left-side">
                     <div class="email">
                         <label for="email">Email</label><br>
-                        <input type="email">
+                        {{form.email}}
                     </div>
                     <div class="sujet">
                         <label for="sujet">Subject</label><br>
-                        <input type="text">
+                        {{form.subject}}
                     </div>
                     <div class="message">
                         <label for="message">Message</label><br>
-                        <textarea cols="30" rows="10"></textarea>
+                        {{form.message}}
                     </div>
                     <div class="submit">
                         <button type="submit">Submit</button>
@@ -91,9 +82,9 @@
                 <div class="right-side">
                     <div class="my-elements">
                         <ul>
-                            <li><i class="fa-solid fa-envelope"></i> zgherea13@gmail.com</li><br>
-                            <li><i class="fa-solid fa-phone"></i> +32 475 86 15 66</li><br>
-                            <li><i class="fa-brands fa-github"></i> AndreiZg</li>
+                            <li><i class="fa-solid fa-envelope"></i><span class="inner-text"> zgherea13@gmail.com</span></li><br>
+                            <li><i class="fa-solid fa-phone"></i><span class="inner-text">  +32 475 86 15 66</span></li><br>
+                            <li><i class="fa-brands fa-github"></i><span class="inner-text">  AndreiZg</span></li>
                         </ul>
                     </div>
                 </div>
@@ -101,5 +92,16 @@
         </div>
     </main>
     </form>
-    <script src="anim.js"></script>
+    <div class="container-message">
+        <div class="message1">
+            <h2>
+                {% if messages %}
+                    {% for message in messages %}
+                        {{message}}
+                    {% endfor %}
+                {% endif %}
+            </h2>
+        </div>
+    </div>
+    <script src="{% static 'myapp/js/anim.js' %}"></script>
 {% endblock %}

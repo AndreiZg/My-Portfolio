@@ -7,30 +7,29 @@
     <link rel="stylesheet" href="{% static 'myapp/css/projects.css' %}">
     <title>Projects</title>
     <style>
-        .first{
-            background: url("{% static 'myapp/images/pizza.png' %}");
-            background-color: var(--etc);
-            background-position: center;
-            background-size: contain;
-            background-repeat: no-repeat;
-        }
+    .first{
+        background: url("{% static 'myapp/images/pizza.png' %}");
+        background-color: var(--etc);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .second{
+        background: url("{% static 'myapp/images/supra.jpg' %}");
+        border-radius: 20px;
+        background-color: var(--etc);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
 
-        .second{
-            background: url("{% static 'myapp/images/supra.jpg' %}");
-            border-radius: 20px;
-            background-color: var(--etc);
-            background-position: center;
-            background-size: contain;
-            background-repeat: no-repeat;
-        }
-
-        .third{
-            background: url("{% static 'myapp/images/travelling.jpg' %}");
-            background-color: var(--etc);
-            background-position: center;
-            background-size: contain;
-            background-repeat: no-repeat;
-        }
+    .third{
+        background: url("{% static 'myapp/images/travelling.jpg' %}");
+        background-color: var(--etc);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
     </style>
 {% endblock %}
 
@@ -66,50 +65,56 @@
         <div class="container">
             <ul class="projects">
                 <li>
-                    <div class="flip-card" style="--t:1">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <h1 class="title">Catering Website</h1>
-                                <p>Hover Me</p>
-                            </div>
-                            <div class="flip-card-back first">
-                                <h1 class="title"></h1>
-                                <p> </p>
+                    <a href='https://andreizg.github.io/smakolyk/'>
+                        <div class="flip-card" style="--t:1">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <h1 class="title">Catering Website</h1>
+                                    <p>Hover Me</p>
+                                </div>
+                                <div class="flip-card-back first">
+                                    <h1 class="title"></h1>
+                                    <p> </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </li>
             </ul>
             <ul class="projects">
                 <li>
-                    <div class="flip-card" style="--t:2">
-                        <div class="flip-card-inner second">
-                            <div class="flip-card-front">
-                                <h1 class="title">Car Seller</h1>
-                                <p>Hover Me</p>
-                            </div>
-                            <div class="flip-card-back">
-                                <h1 class="title">Coming soon...</h1>
-                                <p> </p>
+                    <a href='#'>
+                        <div class="flip-card" style="--t:2">
+                            <div class="flip-card-inner second">
+                                <div class="flip-card-front">
+                                    <h1 class="title">Car Seller</h1>
+                                    <p>Hover Me</p>
+                                </div>
+                                <div class="flip-card-back second">
+                                    <h1 class="title">Coming soon...</h1>
+                                    <p> </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </li>
             </ul>
             <ul class="projects">
                 <li>
-                    <div class="flip-card" style="--t:3">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <h1 class="title">Cyprus Page</h1>
-                                <p>Hover Me</p>
-                            </div>
-                            <div class="flip-card-back third">
-                                <h1 class="title"></h1>
-                                <p> </p>
+                    <a href='#'>
+                        <div class="flip-card" style="--t:3">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <h1 class="title">Cyprus Page</h1>
+                                    <p>Hover Me</p>
+                                </div>
+                                <div class="flip-card-back third">
+                                    <h1 class="title"></h1>
+                                    <p> </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </li>
             </ul>
         </div>
