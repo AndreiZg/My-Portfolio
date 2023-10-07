@@ -449,10 +449,10 @@ nav a {
 
     .container{
         margin-top: 130px;
-        top: 100%;
+        top: 80%;
         left: 50%;
     }
-    @media (max-width: 330px) {
+@media (max-width: 370px) {
     .burger-button{
         display: flex;
         position: absolute;

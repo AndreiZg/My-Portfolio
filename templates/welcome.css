@@ -431,6 +431,10 @@ nav a {
         nav .logo{
             left: 40px;
         }
+
+        .photo {
+            top: 39%;
+        }
     }}
 }
 
