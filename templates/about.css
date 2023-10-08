@@ -359,7 +359,7 @@ nav a {
 
     @media (max-width: 420px){
         .responsive-part{
-            bottom: 80px;
+            bottom: 60px;
             margin-left: 20px;
             margin-right: 50px;
         }
@@ -379,6 +379,12 @@ nav a {
 
         nav .logo{
             left: 40px;
+        }
+
+        .responsive-part{
+            bottom: 60px;
+            margin-left: 10px;
+            margin-right: 50px;
         }
     }
 }}

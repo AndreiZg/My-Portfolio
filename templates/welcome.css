@@ -394,7 +394,7 @@ nav a {
         height: 50vw; /* Maintain aspect ratio */
     }
     .main-text{
-        top: 76%; /* Vertically center the text */
+        top: 79%; /* Vertically center the text */
         left: 46%; /* Horizontally center the text */
         transform: translate(-50%, -50%); /* Center the text */
         animation: none;
