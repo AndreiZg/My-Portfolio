@@ -1,0 +1,481 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root{
+    --background : #89C2D9;
+    --text : #014F86;
+    --btn : #2C7DA0;
+    --elements : #013A63;
+    --etc : #012A4A;
+}
+
+body{
+    overflow: hidden;
+    background-color: var(--background);
+}
+/* Navbar */
+nav {
+    display: flex;
+    width: 100%;
+    height: 90px;
+    width: 70%;
+    margin: auto;
+    background-color: rgba(0, 70, 84, 0.2);
+    justify-content: center;
+    clip-path: polygon(50% 0%, 100% 0, 82% 100%, 18% 100%, 0 0);
+    overflow: hidden;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 6rem;
+    font-size: 20px;
+}
+
+nav li {
+    color: white;
+    font-family: sans-serif;
+}
+
+nav a {
+    position: relative;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+    cursor: pointer;
+    color:white;
+}
+
+.burger-button {
+    width: 40px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    display: none;
+}
+
+.logo{
+    display: none;
+}
+
+.responsive-items{
+    display: none;
+}
+
+.bar {
+    width: 100%;
+    height: 5px;
+    background-color: #333;
+    transition: transform 0.3s ease;
+}
+
+.burger-button.open .bar:nth-child(1) {
+    transform: translateY(12px) rotate(45deg);
+}
+
+.burger-button.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-button.open .bar:nth-child(3) {
+    transform: translateY(-12px) rotate(-45deg);
+}
+
+.my-projects h1{
+    text-align: center;
+    margin-top: 40px;
+    font-size: 3vw;
+    color: var(--text);
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.container{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+}
+
+.container ul{
+    display: flex;
+    margin: 60px;
+}
+
+.projects{
+    background-color: transparent;
+    display: flex;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 400px;
+    height: 400px;
+    perspective: 1000px;
+    font-family: sans-serif;
+    position: relative;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: calc(.2s * var(--t));
+    opacity: 0;
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 1rem;
+  }
+  
+  .flip-card-front {
+    background: var(--etc);
+    color: white;
+  }
+  
+  .flip-card-back {
+    color: white;
+    transform: rotateY(180deg);
+    z-index: 2;
+  }
+
+  .first{
+    background: url(images/pizza.png);
+    background-color: var(--etc);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .second{
+    background: url(images/supra.jpg);
+    border-radius: 20px;
+    background-color: var(--etc);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .second::before {
+    content: "";
+    border-radius: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px); /* Adjust the blur radius as needed */
+    z-index: -1;
+  }
+
+  .third{
+    background: url(images/msg762167190-75134.jpg);
+    background-color: var(--etc);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .flip-card h1{
+    font-size: 50px;
+  }
+
+@keyframes slideTop {
+    from{
+        top: -90px;
+        opacity: 0;
+    }
+    to{
+        top: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    from{
+        top: 300px;
+        opacity: 0;
+    }
+    to{
+        top: 0;
+        opacity: 1;
+    }
+}
+
+@media (max-width : 1470px){
+    .flip-card {
+        background-color: transparent;
+        width: 350px;
+        height: 350px;
+      }
+}
+
+@media (max-width : 1300px){
+    .container ul{
+        display: flex;
+        margin: 40px;
+    }
+
+    .my-projects h1{
+        font-size: 4vw;
+    }
+}
+
+@media (max-width : 1220px){
+    body{
+        overflow: visible;
+    }
+    .flip-card {
+        background-color: transparent;
+        width: 500px;
+        animation: none;
+        height: 330px;
+        opacity: 1;
+    }
+
+    .container ul{
+        display: flex;
+        margin: 30px;
+    }
+
+    .my-projects h1{
+        font-size: 4vw;
+    }
+    
+    .flip-card-front h1{
+        font-size: 2vw;
+    }
+
+    .container{
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        display: flex;
+        animation: none;
+        flex-direction: column;
+    }
+}
+
+@media (max-width : 1110px){
+    nav ul {
+        display: flex;
+        align-items: center;
+        gap: 4rem;
+        font-size: 17px;
+    }
+
+    .flip-card-front h1{
+        font-size: 3vw;
+    }
+}
+
+
+@media (max-width:820px) {
+    nav {
+        position: relative;
+        justify-content: start;
+    }
+
+    nav .nav-items{
+        display: none;
+    }
+
+    nav ul{
+        display: flex;
+        align-items: center;
+        gap: 0;
+        font-size: 20px;
+        animation: none;
+        margin: auto;
+    }
+
+    nav .logo{
+        display: flex;
+        position: absolute;
+        left: 120px;
+        font-size: 4.3vw;
+        font-family: 'Ubuntu', sans-serif;
+        color: var(--text);
+    }
+
+    .flip-card {
+        background-color: transparent;
+        width: 450px;
+        animation: none;
+        height: 330px;
+        opacity: 1;
+    }
+
+    
+    .flip-card-front h1{
+        font-size: 3.4vw;
+    }
+
+    .my-projects h1{
+        font-size: 5vw;
+    }
+
+    .burger-button{
+        display: flex;
+        position: absolute;
+        right: 100px;
+        cursor: pointer;
+    }
+
+    .burger-button .bar{
+        background-color: var(--etc);
+    }
+
+    .responsive-items{
+        position: absolute;
+        display: block;
+        background: linear-gradient(to bottom, rgba(4, 42, 88, 0.8), rgba(77, 166, 229, 0.5) 70.71%);
+        color: white;
+        list-style: none;
+        text-decoration: none;
+        width: 300px;
+        margin: auto;
+        text-align: center;
+        font-size: 20px;
+        font-family: sans-serif;
+        z-index: 2;
+        width: 100%;
+        left: -100%;
+        transition: 0.5s ease;
+    }
+
+    .responsive-items li{
+        padding: 40px;
+    }
+
+    .responsive-items a {
+        color: white;
+    }
+}
+
+@media (max-width: 630px){
+    nav .logo{
+        display: flex;
+        position: absolute;
+        left: 100px;
+        font-size: 4.3vw;
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    .burger-button{
+        display: flex;
+        position: absolute;
+        right: 90px;
+        height: 26px;
+        width: 32px;
+    }
+
+    .flip-card {
+        width: 400px;
+    }
+
+    .flip-card-back h1{
+        font-size: 8vw;
+    }
+
+    .flip-card-front h1{
+        font-size: 6vw;
+    }
+
+} 
+
+@media (max-width: 510px) {
+    nav .logo{
+        display: flex;
+        position: absolute;
+        left: 60px;
+        font-size: 4.3vw;
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    .burger-button{
+        display: flex;
+        position: absolute;
+        right: 60px;
+        height: 26px;
+        width: 32px;
+    }
+
+    .flip-card {
+        width: 360px;
+        height: 300px;
+    }
+
+@media (max-width: 420px){
+    .flip-card {
+        width: 300px;
+        height: 250px;
+    }
+
+    .my-projects h1{
+        font-size: 7vw;
+    }
+
+    .container{
+        margin-top: 130px;
+        top: 80%;
+        left: 50%;
+    }
+@media (max-width: 370px) {
+    .burger-button{
+        display: flex;
+        position: absolute;
+        right: 35px;
+        height: 23px;
+        width: 26px;
+    }
+
+    nav .logo{
+        left: 40px;
+    }
+
+    .flip-card {
+        width: 200px;
+        height: 200px;
+    }
+
+    .my-projects h1{
+        font-size: 7vw;
+    }
+
+    .container{
+        top: 60%;
+        left: 50%;
+    }
+}}}
